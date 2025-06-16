@@ -6,10 +6,11 @@
         "run",
         "--rm",
         "-i",
-        "-t",
         "-v",
         "${cwd}:/workdir",
-        "katzkawai/markitdown-mcp:latest"
+        "-w",
+        "/workdir",
+        "markitdown-mcp"
       ],
       "env": {
         "MARKITDOWN_ENABLE_PLUGINS": "True"
