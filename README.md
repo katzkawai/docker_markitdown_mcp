@@ -58,6 +58,8 @@ MarkItDown MCPは以下のモードで実行できます：
    ```
    
    Claude Desktopで使用する場合の`.mcp.json`設定例：
+   
+   **Dockerを使用する場合：**
    ```json
    {
      "mcpServers": {
@@ -65,6 +67,22 @@ MarkItDown MCPは以下のモードで実行できます：
          "type": "stdio",
          "command": "docker",
          "args": ["run", "-i", "--rm", "-v", "${cwd}:/workdir", "katzkawai/markitdown-mcp:latest"]
+       }
+     }
+   }
+   ```
+   
+   **ローカルにインストールした場合：**
+   ```json
+   {
+     "mcpServers": {
+       "markitdown-mcp": {
+         "type": "stdio",
+         "command": "markitdown-mcp",
+         "args": [],
+         "env": {
+           "MARKITDOWN_ENABLE_PLUGINS": "True"
+         }
        }
      }
    }
