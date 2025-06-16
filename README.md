@@ -56,6 +56,19 @@ MarkItDown MCPは以下のモードで実行できます：
    ```bash
    docker run -v $(pwd):/workdir katzkawai/markitdown-mcp:latest
    ```
+   
+   Claude Desktopで使用する場合の`.mcp.json`設定例：
+   ```json
+   {
+     "mcpServers": {
+       "markitdown-mcp": {
+         "type": "stdio",
+         "command": "docker",
+         "args": ["run", "-i", "--rm", "-v", "${cwd}:/workdir", "katzkawai/markitdown-mcp:latest"]
+       }
+     }
+   }
+   ```
 
 2. **HTTP サーバーモード**
    ```bash
