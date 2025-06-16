@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "markitdown-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v",
+        "${cwd}:/workdir",
+        "katzkawai/markitdown-mcp:latest"
+      ]
+    }
+  }
+}
