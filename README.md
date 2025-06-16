@@ -22,8 +22,8 @@ docker pull katzkawai/markitdown-mcp:latest
 ### ローカルでビルド
 
 ```bash
-git clone <このリポジトリ>
-cd Docker
+git clone https://github.com/katzkawai/docker_markitdown_mcp.git
+cd docker_markitdown_mcp
 docker build -t markitdown-mcp .
 ```
 
